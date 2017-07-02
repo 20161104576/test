@@ -89,8 +89,8 @@ int main()
             aazi[i]=azi[i]-48;
         }
         bazi=aazi[0]*1000 + aazi[1]*100 + aazi[2]*10 + aazi[3];
-        printf("%d\n",bazi);
-        fprintf(fp,"20%c%c年%c%c月%c%c日,%d:%d:%d,%c,%s,%c,%s,%d,%.1lf\n",date[4],date[5],date[2],date[3],date[0],date[1],hour,minute,seconds,nlat,lat,nlon,lon,bazi,bspeed);
+        printf("%d千米\n",bazi);
+        fprintf(fp,"20%c%c年%c%c月%c%c日,%d:%d:%d,%c,%s,%c,%s,%d千米,%.1lf\n",date[4],date[5],date[2],date[3],date[0],date[1],hour,minute,seconds,nlat,lat,nlon,lon,bazi,bspeed);
     }
     fclose(fp);
     fclose(p);
