@@ -55,6 +55,17 @@ int main()
         printf("经度 %s\n经度方向 %c\n",lon,nlon);
         
         
+        char moon[6];
+        moon[0] = str2[39];
+        moon[1] = str2[40];
+        printf("weixing  %s\n",moon);
+        
+        char course[6];
+        for(i=0; i<5; i++) {
+            course[i] = str1[i+45];
+        }
+        printf("%s\n",course);
+        
         char speed[6];//分离地面速率
         double aspeed[6];//将speed数组变为整型数组
         double bspeed;
@@ -69,6 +80,7 @@ int main()
                 aspeed[i]=speed[i]-48;
         }
         bspeed = aspeed[0]*100 + aspeed[1]*10 + aspeed[2] + aspeed[4]/10;
+        bspeed = bspeed*1.825;
         printf("地面速率 %.1lf\n",bspeed);
         
         
